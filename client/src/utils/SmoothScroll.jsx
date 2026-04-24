@@ -3,8 +3,9 @@ import Lenis from '@studio-freight/lenis';
 
 const SmoothScroll = () => {
     useEffect(() => {
+        console.log("Lenis Initializing...");
         const lenis = new Lenis({
-            duration: 1.2,
+            duration: 1.5,
             easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
             direction: 'vertical',
             gestureDirection: 'vertical',
@@ -12,13 +13,17 @@ const SmoothScroll = () => {
             smoothTouch: false,
             touchMultiplier: 2,
             infinite: false,
-            lerp: 0.08,
+            lerp: 0.05, 
         });
+
+        // Debugging
+        window.lenis = lenis;
 
         function raf(time) {
             lenis.raf(time);
             requestAnimationFrame(raf);
         }
+        console.log("Lenis RAF started");
 
         requestAnimationFrame(raf);
 

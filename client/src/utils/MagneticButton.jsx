@@ -16,9 +16,9 @@ const MagneticButton = ({ children, className = "", ...props }) => {
             const y = clientY - (top + height / 2);
 
             gsap.to(button, {
-                x: x * 0.3,
-                y: y * 0.3,
-                duration: 0.6,
+                x: x * 0.45,
+                y: y * 0.45,
+                duration: 0.4,
                 ease: "power2.out"
             });
         };

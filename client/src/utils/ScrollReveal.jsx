@@ -4,18 +4,18 @@ import { motion } from 'framer-motion';
 export const ScrollReveal = ({ children, delay = 0, staggerChildren = 0.1, className = "" }) => {
     return (
         <motion.div
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 60 }} // More dramatic reveal distance
             whileInView={{ 
                 opacity: 1, 
                 y: 0,
                 transition: {
-                    duration: 0.8,
+                    duration: 1.0, // Slightly slower for elegance
                     delay: delay,
                     ease: [0.21, 0.47, 0.32, 0.98],
                     staggerChildren: staggerChildren
                 }
             }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, margin: "-50px" }} // Trigger sooner for better visibility
             className={className}
         >
             {children}

@@ -54,13 +54,13 @@ const Capabilities = () => {
         </ScrollReveal>
 
         {/* ================= CARDS ================= */}
-        <StaggerContainer className="w-full flex flex-col lg:flex-row gap-6 lg:gap-[30px] items-stretch">
+        <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-[30px] w-full">
 
           {cards.map((card, index) => (
             <motion.div
               key={index}
               whileHover={{ y: -10, scale: 1.01 }}
-              className="flex flex-col rounded-[16px] overflow-hidden border border-[#B9B9B9] w-full lg:w-[470px] transition-all duration-500 hover:shadow-2xl hover:border-[#2441C5] group cursor-default"
+              className={`flex flex-col rounded-[16px] overflow-hidden border border-[#B9B9B9] w-full transition-all duration-500 hover:shadow-2xl hover:border-[#2441C5] group cursor-default ${index === 2 && "md:col-span-2 lg:col-span-1"}`}
               style={{
                 background: card.dark
                   ? "#FFFFFF"
@@ -68,10 +68,10 @@ const Capabilities = () => {
               }}
             >
               {/* Content */}
-              <div className="p-6 md:p-[35px] flex flex-col gap-3 md:gap-[12px]">
+              <div className="p-6 md:p-[35px] flex flex-col gap-3 md:gap-[12px] flex-grow">
 
                 <h3
-                  className={`text-2xl md:text-[42px] leading-tight md:leading-[50px] transition-colors duration-500 ${card.dark ? "text-black group-hover:text-primary-purple" : "text-white"
+                  className={`text-2xl md:text-[32px] lg:text-[42px] leading-tight md:leading-[1.1] transition-colors duration-500 ${card.dark ? "text-black group-hover:text-primary-purple" : "text-white"
                     }`}
                 >
                   {card.title}
@@ -87,7 +87,7 @@ const Capabilities = () => {
               </div>
 
               {/* Image */}
-              <div className="overflow-hidden">
+              <div className="mt-auto overflow-hidden">
                 <img
                   src={card.image}
                   alt="card"

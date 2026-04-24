@@ -8,10 +8,12 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import ScrollToTop from './utils/ScrollToTop';
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <SmoothScroll />
       <div className="bg-primary-dark text-text-main min-h-screen flex flex-col font-inter relative">
         {/* Background radial gradient effect */}
