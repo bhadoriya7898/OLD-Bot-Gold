@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary-dark: #0B0B0F;
+  --color-primary-purple: #8A2BE2;
+  --color-purple-hover: #9c4cff;
+  --color-glass-bg: rgba(255, 255, 255, 0.05);
+  --color-glass-border: rgba(255, 255, 255, 0.1);
+  --color-text-main: #FFFFFF;
+  --color-text-muted: #A0A0A0;
+  --font-inter: 'Inter', sans-serif;
+  --font-satoshi: 'Satoshi', 'Inter', sans-serif;
+  --font-roboto: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: var(--color-primary-dark);
+  color: var(--color-text-main);
+  font-family: var(--font-inter);
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Glassmorphism Utilities */
+@utility glass-panel {
+  background: var(--color-glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--color-glass-border);
+}
+
+/* Glow effects */
+@utility purple-glow {
+  box-shadow: 0 0 24px rgba(138, 43, 226, 0.4);
+}
+
+@utility text-glow {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+@utility pricing-card-glow {
+  box-shadow: 0 10px 50px -10px rgba(113, 47, 255, 0.5);
+}
+
+@utility primary-gradient {
+  background: linear-gradient(270deg, #712FFF 0%, #A97AFF 100%);
+}
+
+@utility table-header-gradient {
+  background: linear-gradient(0deg, #0e0a39 0%, #1a1555 100%);
+}
+
+/* Base custom styles if required */
+html {
+  /* Lenis handles smooth scrolling */
+}
