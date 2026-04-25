@@ -121,9 +121,9 @@ const Footer = () => {
               <div>
                 <h4 className="text-white mb-4 font-medium uppercase tracking-widest text-xs opacity-40">Legal</h4>
                 <ul className="flex flex-col gap-2 text-sm text-white/70">
-                  <li className="hover:text-primary-purple transition-colors cursor-pointer">Terms of Service</li>
-                  <li className="hover:text-primary-purple transition-colors cursor-pointer">Privacy Policy</li>
-                  <li className="hover:text-primary-purple transition-colors cursor-pointer">License Agreement</li>
+                  <li className="hover:text-primary-purple transition-colors cursor-pointer"><Link to="/terms">Terms of Service</Link></li>
+                  <li className="hover:text-primary-purple transition-colors cursor-pointer"><Link to="/privacy">Privacy Policy</Link></li>
+                  <li className="hover:text-primary-purple transition-colors cursor-pointer"><Link to="/license">License Agreement</Link></li>
                 </ul>
               </div>
 
@@ -131,9 +131,9 @@ const Footer = () => {
               <div>
                 <h4 className="text-white mb-4 font-medium uppercase tracking-widest text-xs opacity-40">Resources</h4>
                 <ul className="flex flex-col gap-2 text-sm text-white/70">
-                  <li className="hover:text-primary-purple transition-colors cursor-pointer">Style Guide</li>
-                  <li className="hover:text-primary-purple transition-colors cursor-pointer">Instructions</li>
-                  <li className="hover:text-primary-purple transition-colors cursor-pointer">Change Log</li>
+                  <li className="hover:text-primary-purple transition-colors cursor-pointer"><Link to="/style-guide">Style Guide</Link></li>
+                  <li className="hover:text-primary-purple transition-colors cursor-pointer"><Link to="/instructions">Instructions</Link></li>
+                  <li className="hover:text-primary-purple transition-colors cursor-pointer"><Link to="/changelog">Change Log</Link></li>
                 </ul>
               </div>
 
