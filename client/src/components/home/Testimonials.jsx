@@ -97,7 +97,7 @@ const Testimonials = () => {
           
           <div className="w-full max-w-[642px] px-4">
             <h2
-              className="font-inter font-normal text-2xl md:text-[40px] leading-tight md:line-height-[48px]"
+              className="font-inter font-normal text-2xl md:text-[40px] leading-tight md:line-height-[48px] px-2"
               style={{
                 background: "linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.7) 100%)",
                 WebkitBackgroundClip: "text",
@@ -110,7 +110,7 @@ const Testimonials = () => {
 
           <div className="w-full max-w-[630px] px-4">
             <p 
-                className="font-inter font-normal text-sm md:text-base leading-relaxed md:leading-[20.8px] text-[#BDBDBD]" 
+                className="font-inter font-normal text-sm md:text-base leading-relaxed md:leading-[20.8px] text-[#BDBDBD] px-2" 
             >
               Discover what the coding community is saying about Saturn's in our Testimonials 
               section. Immerse yourself in firsthand experiences as developers share.

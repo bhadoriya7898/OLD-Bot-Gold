@@ -82,7 +82,7 @@ const TrustedStats = () => {
             </StaggerContainer>
 
             {/* ================= PLATFORM ROW ================= */}
-            <StaggerContainer className="w-full pt-16 border-t border-white/5 flex flex-wrap justify-between items-center gap-y-12 gap-x-8 md:gap-x-12 px-2 md:px-10">
+            <StaggerContainer className="w-full pt-16 border-t border-white/5 flex flex-wrap justify-center lg:justify-between items-center gap-y-12 gap-x-8 md:gap-x-12 px-2 md:px-10">
                 {platforms.map((item, index) => (
                     <motion.div
                         key={index}

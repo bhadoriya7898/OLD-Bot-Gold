@@ -15,7 +15,7 @@ function App() {
     <BrowserRouter>
       <ScrollToTop />
       <SmoothScroll />
-      <div className="bg-primary-dark text-text-main min-h-screen flex flex-col font-inter relative">
+      <div className="bg-primary-dark text-text-main min-h-screen flex flex-col font-inter relative overflow-x-hidden">
         {/* Background radial gradient effect */}
         <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] bg-primary-purple/20 rounded-full blur-[120px] pointer-events-none z-0"></div>
         <div className="absolute top-[20%] right-[-10%] w-[40%] h-[60%] bg-primary-purple/10 rounded-full blur-[150px] pointer-events-none z-0"></div>

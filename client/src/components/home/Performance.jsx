@@ -26,7 +26,7 @@ const items = [
 
 const Performance = () => {
   return (
-    <section id="performance" className="w-full flex justify-center py-16 md:py-20 relative">
+    <section id="performance" className="w-full flex justify-center py-16 md:py-20 relative overflow-hidden">
 
       {/* Gradient Background */}
       <div
