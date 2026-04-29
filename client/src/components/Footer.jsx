@@ -46,7 +46,7 @@ const Footer = () => {
           <img
             src="/images/footerimg.png"
             alt="footer"
-            className="w-[80%] md:w-[70%] object-contain rounded-[18px] mb-6"
+            className="w-[95%] md:w-[92%] lg:w-[90%] xl:w-[85%] h-auto object-contain rounded-t-[18px] -mb-5 md:-mb-10 lg:-mb-16 xl:-mb-20"
           />
 
         </div>
@@ -86,19 +86,19 @@ const Footer = () => {
               {/* Social Icons */}
               <div className="flex items-center gap-6 mt-4">
                 <MagneticButton>
-                   <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="block transition-all duration-300 hover:scale-110">
-                     <img src="/images/instagramicon.png" alt="Instagram" className="w-[20px] h-[20px] object-contain opacity-60 hover:opacity-100 transition-opacity" />
-                   </a>
+                  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="block transition-all duration-300 hover:scale-110">
+                    <img src="/images/instagramicon.png" alt="Instagram" className="w-[20px] h-[20px] object-contain opacity-60 hover:opacity-100 transition-opacity" />
+                  </a>
                 </MagneticButton>
                 <MagneticButton>
-                   <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="block transition-all duration-300 hover:scale-110">
-                     <img src="/images/twittericon.png" alt="Twitter" className="w-[20px] h-[20px] object-contain opacity-60 hover:opacity-100 transition-opacity" />
-                   </a>
+                  <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="block transition-all duration-300 hover:scale-110">
+                    <img src="/images/twittericon.png" alt="Twitter" className="w-[20px] h-[20px] object-contain opacity-60 hover:opacity-100 transition-opacity" />
+                  </a>
                 </MagneticButton>
                 <MagneticButton>
-                   <a href="mailto:hello@example.com" className="block transition-all duration-300 hover:scale-110">
-                     <img src="/images/mailicon.png" alt="Mail" className="w-[20px] h-[20px] object-contain opacity-60 hover:opacity-100 transition-opacity" />
-                   </a>
+                  <a href="mailto:hello@example.com" className="block transition-all duration-300 hover:scale-110">
+                    <img src="/images/mailicon.png" alt="Mail" className="w-[20px] h-[20px] object-contain opacity-60 hover:opacity-100 transition-opacity" />
+                  </a>
                 </MagneticButton>
               </div>
             </div>

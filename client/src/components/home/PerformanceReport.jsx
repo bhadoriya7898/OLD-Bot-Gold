@@ -15,19 +15,12 @@ const PerformanceReport = () => {
             <div className="w-full max-w-[1144px] px-6 md:px-0 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-[50px]">
 
                 {/* ================= LEFT SIDE (CARD) ================= */}
-                <div
-                    className="w-full rounded-[24px] border flex items-center justify-center p-4 md:p-6"
-                    style={{
-                        background:
-                            "linear-gradient(0deg, #0E0A39, #0E0A39), radial-gradient(139.98% 142.91% at 0% 0%, rgba(113,47,255,0.2) 0%, rgba(113,47,255,0) 56%), radial-gradient(139.98% 142.91% at 100% 100%, rgba(113,47,255,0.2) 0%, rgba(113,47,255,0) 48%)",
-                        border: "1px solid #6862AB",
-                    }}
-                >
+                <div className="w-full flex items-center justify-center">
                     {/* Image Placeholder */}
                     <img
                         src="/images/home-chart.png"
                         alt="performance"
-                        className="w-full h-auto max-h-[400px] object-contain rounded-[16px]"
+                        className="w-full h-auto object-contain"
                     />
                 </div>
 

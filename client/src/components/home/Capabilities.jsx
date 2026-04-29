@@ -33,7 +33,7 @@ const Capabilities = () => {
       }}
     >
       {/* Main Container */}
-      <div className="w-full max-w-[1284px] px-6 md:px-10 lg:px-0 py-16 md:py-20 flex flex-col items-center gap-12">
+      <div className="w-full max-w-[1440px] px-6 md:px-10 lg:px-12 py-16 md:py-20 flex flex-col items-center gap-12">
 
         {/* ================= HEADER ================= */}
         <ScrollReveal className="flex flex-col items-center gap-6 text-center">
@@ -87,11 +87,11 @@ const Capabilities = () => {
               </div>
 
               {/* Image */}
-              <div className="mt-auto overflow-hidden">
+              <div className="mt-auto overflow-hidden h-[200px] md:h-[250px] w-full">
                 <img
                   src={card.image}
                   alt="card"
-                  className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                 />
               </div>
             </motion.div>

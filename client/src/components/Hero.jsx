@@ -19,8 +19,8 @@ const Hero = () => {
 
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
       transition: {
         duration: 0.8,
@@ -36,7 +36,7 @@ const Hero = () => {
       <div className="flex flex-col lg:flex-row justify-between items-center w-full z-10 gap-16 lg:gap-8 relative">
 
         {/* ================= LEFT SIDE (Text & UI) ================= */}
-        <motion.div 
+        <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
@@ -44,7 +44,7 @@ const Hero = () => {
         >
 
           {/* Tagline Pill */}
-          <motion.div 
+          <motion.div
             variants={itemVariants}
             className="inline-flex items-center justify-center self-start rounded-full border border-[#AB86E7] px-5 sm:px-7 py-2"
             style={{
@@ -58,13 +58,13 @@ const Hero = () => {
 
           {/* Heading Container */}
           <div className="flex flex-col space-y-4">
-            <motion.h1 
+            <motion.h1
               variants={itemVariants}
               className="font-inter text-[42px] leading-[48px] sm:text-5xl lg:text-[60px] lg:leading-[72px] font-normal text-white"
             >
               Professional{" "}
               <br className="hidden sm:block" />
-              <motion.span 
+              <motion.span
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 0.8 }}
@@ -80,7 +80,7 @@ const Hero = () => {
               System Consistency
             </motion.h1>
 
-            <motion.p 
+            <motion.p
               variants={itemVariants}
               className="font-inter text-base sm:text-lg lg:text-[20px] leading-relaxed text-[#BDBDBD] max-w-lg"
             >
@@ -90,7 +90,7 @@ const Hero = () => {
           </div>
 
           {/* Buttons */}
-          <motion.div 
+          <motion.div
             variants={itemVariants}
             className="flex flex-col sm:flex-row items-center gap-4 sm:gap-5 w-full sm:w-auto pt-2"
           >
@@ -113,9 +113,9 @@ const Hero = () => {
         </motion.div>
 
         {/* ================= RIGHT SIDE (Glowing Pillar) ================= */}
-        <motion.div 
+        <motion.div
           style={{ y: y1 }}
-          className="w-full lg:w-1/2 flex items-center justify-center lg:absolute lg:top-1/2 lg:-translate-y-1/2 lg:right-[-40px] xl:right-[-120px] z-0 opacity-100 mix-blend-screen pointer-events-none"
+          className="w-full lg:w-1/2 flex items-center justify-center lg:absolute lg:top-[55%] lg:-translate-y-1/2 lg:right-[20px] xl:right-[60px] z-0 opacity-100 mix-blend-screen pointer-events-none"
         >
           <motion.img
             initial={{ scale: 0.8, opacity: 0 }}
@@ -123,7 +123,11 @@ const Hero = () => {
             transition={{ duration: 1.5, ease: [0.21, 0.47, 0.32, 0.98] }}
             src="/images/glowing-pillar.jpg"
             alt="pillar"
-            className="w-[90vw] max-w-[500px] lg:max-w-[700px] xl:max-w-[850px] h-auto object-contain"
+            style={{
+              WebkitMaskImage: "radial-gradient(ellipse at center, black 50%, transparent 80%)",
+              maskImage: "radial-gradient(ellipse at center, black 50%, transparent 80%)"
+            }}
+            className="w-[100vw] max-w-[600px] lg:max-w-[900px] xl:max-w-[1100px] h-auto object-contain lg:-translate-x-12 lg:-translate-y-12"
           />
         </motion.div>
       </div>
