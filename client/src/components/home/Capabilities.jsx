@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { ScrollReveal, StaggerContainer } from "../../utils/ScrollReveal";
 import { motion } from "framer-motion";
 
@@ -24,6 +24,15 @@ const cards = [
 ];
 
 const Capabilities = () => {
+  const scrollRef = useRef(null);
+
+  const scroll = (direction) => {
+    if (scrollRef.current) {
+      const scrollAmount = window.innerWidth > 768 ? 493 : 300; // card width + gap
+      scrollRef.current.scrollBy({ left: direction === 'left' ? -scrollAmount : scrollAmount, behavior: 'smooth' });
+    }
+  };
+
   return (
     <section
       className="w-full flex justify-center"
@@ -33,15 +42,12 @@ const Capabilities = () => {
       }}
     >
       {/* Main Container */}
-      <div className="w-full max-w-[1440px] px-6 md:px-10 lg:px-12 py-16 md:py-20 flex flex-col items-center gap-12">
+      <div className="w-full max-w-[1920px] px-4 md:px-6 lg:px-10 pt-16 pb-32 md:pt-20 md:pb-48 lg:pb-[200px] flex flex-col items-center gap-12">
 
         {/* ================= HEADER ================= */}
-        <ScrollReveal className="flex flex-col items-center gap-6 text-center">
-
+        <ScrollReveal className="flex flex-col items-center gap-6 text-center w-full">
           {/* Pill */}
-          <div
-            className="flex items-center justify-center rounded-full border border-black px-6 py-2 shadow-sm"
-          >
+          <div className="flex items-center justify-center rounded-full border border-black px-6 py-2 shadow-sm">
             <span className="text-sm md:text-base font-normal text-[#02030A]">
               System Capabilities
             </span>
@@ -54,13 +60,18 @@ const Capabilities = () => {
         </ScrollReveal>
 
         {/* ================= CARDS ================= */}
-        <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-[30px] w-full">
+        <div 
+          ref={scrollRef} 
+          className="flex overflow-x-auto snap-x snap-mandatory w-full pb-8 px-2 md:px-4 hide-scrollbar"
+          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+        >
+          <StaggerContainer className="flex gap-[23px] w-max">
 
           {cards.map((card, index) => (
             <motion.div
               key={index}
               whileHover={{ y: -10, scale: 1.01 }}
-              className={`flex flex-col rounded-[16px] overflow-hidden border border-[#B9B9B9] w-full transition-all duration-500 hover:shadow-2xl hover:border-[#2441C5] group cursor-default ${index === 2 && "md:col-span-2 lg:col-span-1"}`}
+              className="flex flex-col rounded-[16px] overflow-hidden border border-[#B9B9B9] w-[90vw] md:w-[470px] h-[auto] md:h-[556px] shrink-0 snap-center transition-all duration-500 hover:shadow-2xl hover:border-[#2441C5] group cursor-default"
               style={{
                 background: card.dark
                   ? "#FFFFFF"
@@ -68,17 +79,17 @@ const Capabilities = () => {
               }}
             >
               {/* Content */}
-              <div className="p-6 md:p-[35px] flex flex-col gap-3 md:gap-[12px] flex-grow">
+              <div className="p-6 md:p-[35px] flex flex-col gap-3 md:gap-[23px] flex-grow z-10">
 
                 <h3
-                  className={`text-2xl md:text-[32px] lg:text-[42px] leading-tight md:leading-[1.1] transition-colors duration-500 ${card.dark ? "text-black group-hover:text-primary-purple" : "text-white"
+                  className={`text-2xl md:text-[42px] leading-tight md:leading-[1.1] transition-colors duration-500 ${card.dark ? "text-black group-hover:text-primary-purple" : "text-white"
                     }`}
                 >
                   {card.title}
                 </h3>
 
                 <p
-                  className={`text-sm md:text-[16px] leading-[20px] md:leading-[20.8px] ${card.dark ? "text-black" : "text-white"
+                  className={`text-sm md:text-[18px] leading-[24px] md:leading-[28px] ${card.dark ? "text-black" : "text-white"
                     }`}
                   style={{ fontFamily: "Roboto" }}
                 >
@@ -87,7 +98,7 @@ const Capabilities = () => {
               </div>
 
               {/* Image */}
-              <div className="mt-auto overflow-hidden h-[200px] md:h-[250px] w-full">
+              <div className="mt-auto overflow-hidden h-[250px] md:h-[300px] w-full relative">
                 <img
                   src={card.image}
                   alt="card"
@@ -96,7 +107,43 @@ const Capabilities = () => {
               </div>
             </motion.div>
           ))}
-        </StaggerContainer>
+          </StaggerContainer>
+        </div>
+
+        {/* ================= CONTROLS ================= */}
+        <div className="flex items-center justify-start w-full gap-6 mt-4 px-2 md:px-4">
+          <button
+            onClick={() => scroll('left')}
+            className="flex items-center justify-center transition-transform hover:scale-105 active:scale-95"
+            style={{
+              width: '68px',
+              height: '68px',
+              borderRadius: '13.03px',
+              border: '1.63px solid #0E1A4E',
+              background: 'linear-gradient(180deg, #0A133B 0%, #030611 100%)'
+            }}
+          >
+            <svg width="20" height="28" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M15 18l-6-6 6-6" />
+            </svg>
+          </button>
+          <button
+            onClick={() => scroll('right')}
+            className="flex items-center justify-center transition-transform hover:scale-105 active:scale-95"
+            style={{
+              width: '68px',
+              height: '68px',
+              borderRadius: '13.03px',
+              border: '1.63px solid #0E1A4E',
+              background: 'linear-gradient(180deg, #0A133B 0%, #030611 100%)'
+            }}
+          >
+            <svg width="20" height="28" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M9 18l6-6-6-6" />
+            </svg>
+          </button>
+        </div>
+
       </div>
     </section>
   );

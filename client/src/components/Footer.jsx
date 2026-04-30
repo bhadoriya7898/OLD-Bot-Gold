@@ -76,7 +76,7 @@ const Footer = () => {
                   className="bg-transparent outline-none text-white text-sm flex-1 px-2"
                 />
 
-                <button className="bg-white text-black px-4 py-1.5 rounded-full text-sm font-medium hover:bg-primary-purple hover:text-white transition-all">
+                <button className="bg-white text-black px-4 py-1.5 rounded-full text-sm font-medium hover:bg-primary-purple hover:text-white transition-all whitespace-nowrap shrink-0">
                   Sign up
                 </button>
 

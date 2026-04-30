@@ -30,12 +30,18 @@ const Performance = () => {
 
       {/* Gradient Background */}
       <div
-        className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[1152px] h-[500px] md:h-[650px] rounded-b-[70px] opacity-50 blur-[11px] pointer-events-none"
-        style={{
-          background:
-            "linear-gradient(180deg, #030215 49%, #2441C5 69%, #FFFFFF 95%)",
-        }}
-      ></div>
+        className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[1152px] h-full min-h-[500px] rounded-b-[70px] pointer-events-none overflow-hidden"
+        style={{ opacity: 0.5 }}
+      >
+        <div
+          className="w-full h-full"
+          style={{
+            background: "linear-gradient(180deg, #030215 0%, #2441C5 50%, #FFFFFF 100%)",
+            filter: "blur(11px)",
+            transform: "scale(1.05)",
+          }}
+        ></div>
+      </div>
 
       {/* Main Container */}
       <div className="w-full max-w-[1070px] px-6 md:px-10 lg:px-[28px] py-10 flex flex-col gap-10 relative z-10">

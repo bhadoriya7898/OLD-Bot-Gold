@@ -115,7 +115,7 @@ const Hero = () => {
         {/* ================= RIGHT SIDE (Glowing Pillar) ================= */}
         <motion.div
           style={{ y: y1 }}
-          className="w-full lg:w-1/2 flex items-center justify-center lg:absolute lg:top-[55%] lg:-translate-y-1/2 lg:right-[20px] xl:right-[60px] z-0 opacity-100 mix-blend-screen pointer-events-none"
+          className="hidden md:flex w-full lg:w-1/2 items-center justify-center lg:absolute lg:top-[55%] lg:-translate-y-1/2 lg:right-[20px] xl:right-[60px] z-0 opacity-100 mix-blend-screen pointer-events-none"
         >
           <motion.img
             initial={{ scale: 0.8, opacity: 0 }}

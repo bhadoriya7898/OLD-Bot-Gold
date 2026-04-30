@@ -63,8 +63,8 @@ const OurBots = () => {
               <div key={index} className="flex items-start gap-3 group">
 
                 {/* Circle Arrow */}
-                <div className="w-[28px] h-[28px] min-w-[28px] rounded-full border border-white/30 flex items-center justify-center overflow-hidden group-hover:border-primary-purple group-hover:bg-primary-purple transition-all duration-300">
-                  <img src="/images/rightarrow.png" alt="arrow" className="w-[12px] h-[12px] object-contain group-hover:filter group-hover:brightness-200" />
+                <div className="w-[28px] h-[28px] min-w-[28px] flex items-center justify-center overflow-hidden group-hover:scale-110 transition-all duration-300">
+                  <img src="/images/rightarrow.png" alt="arrow" className="w-full h-full object-contain" />
                 </div>
 
                 {/* Text */}
